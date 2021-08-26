@@ -6,19 +6,87 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>What is HTML?</title>
+    <meta name="description" content="HTML uses a markup system composed of elements which represent specific content ">
+    <!-- Essa Tag é usada como descrição no browser previamente exibida na busca-->
+
+    <style>
+        p {
+            text-indent: 30px;
+        }
+
+        h2 {
+            text-transform: uppercase;
+            background-color: rgb(182, 180, 180);
+            color: rgb(65, 64, 64);
+            padding-left: 30px;
+            margin: 25px 25px 25px 25px;
+            /*top,right,bottom,left*/
+            padding: 5px 5px 5px 5px;
+            /*top,right,bottom,left*/
+            border: solid 2px black;
+            /*border-style,border-width-border-color*/
+        }
+
+        body {
+            background-color: rgb(243, 252, 231);
+            font-family: sans-serif;
+        }
+
+        #emphasis {
+            color: rgb(55, 5, 233)
+        }
+
+        .emphasis {
+            color: rgb(5, 142, 233)
+        }
+
+        a:visited {
+            /*Quando o usuário já visitou o link*/
+            color: rgb(255, 0, 0);
+        }
+
+        a:hover {
+            /*Quando o mouse é passado sobre o link*/
+            color: rgb(0, 0, 255);
+        }
+
+        a:active {
+            /*Quando o mouse é clicado sobre o link*/
+            color: rgb(0, 255, 0);
+        }
+
+        ul li{  /*Seleciona apenas elementos li herdeiros de um elemento ul*/
+            margin-left: 30px;
+            color:rgb(90, 90, 250);
+            list-style-type: circle;
+        }
+
+        ol li{  /*Seleciona apenas elementos li herdeiros de um elemento ol*/
+            margin-left: 30px;
+            color:rgb(223, 90, 250);            
+        }
+    </style>
+
+
 </head>
 
 <body>
     <h2><b>What is HTML?</b></h2>
-    <p><i>HTML</i> (<b>H</b>yper<b>T</b>ext <b>M</b>arkup <b>L</b>anguage) uses a markup system composed of elements
+    <hr>
+    <p id="emphasis"><i>HTML</i> (<b>H</b>yper<b>T</b>ext <b>M</b>arkup <b>L</b>anguage) uses a markup system composed
+        of elements
         which represent specific content. <i>Markup</i> means that with HTML you declare <i>what</i> is presented to a
         viewer, not <i>how</i>
         it is presented. Visual
-        representations are defined by <i>Cascading Style Sheets (CSS</i>) and realized by browsers. <i>Still existing
-            elements that allow for such</i>, like e.g. <code><i>font</i></code>, "are entirely obsolete, and must not be used by
-        authors"[1].</p>
+        representations are defined by <a href=""><i>Cascading Style Sheets (CSS</i>)</a> and realized by browsers.
+        <i>Still existing
+            elements that allow for such</i>, like e.g. <code><i>font</i></code>, "are entirely obsolete, and must not
+        be used by
+        authors"[1].
+    </p>
 
-    <p>HTML is sometimes called a programming language but it has no logic, so is a <b>markup language</b>. HTML tags
+    <p class="emphasis">HTML is sometimes called a programming language but it has no logic, so is a <b>markup
+            language</b>. HTML tags
         provide semantic meaning and machine-readability to the content in the page.</p>
 
     <p>An element usually consists of an opening tag <code><b>(&lt;element_name/&gt;)</b></code>, a closing tag
@@ -28,17 +96,36 @@
         <code><b>(&lt;element_name/&gt;)</b>...content...<b>(&lt;element_name/&gt;)</b></code>
     </p>
 
-    <p>There are some HTML elements that don't have a closing tag or any contents. These are called void elements. Void
+    <p class="emphasis">There are some HTML elements that don't have a closing tag or any contents. These are called
+        void elements. Void
         elements include
         <code><b>&lt;img&gt;</b></code>,<code><b>&lt;meta&gt;</b></code>,<code><b>&lt;link&gt;</b></code> and
         <code><b>&lt;input&gt;</b></code>.
     </p>
 
     <p>Element names can be thought of as descriptive keywords for the content they contain, such as <code>video</code>,
-        <code>audio</code>,<code>table</code>, <code>footer</code>.</p>
+        <code>audio</code>,<code>table</code>, <code>footer</code>.
+    </p>
 
     <p>A HTML page may consist of potentially hundreds of elements which are then read by a web browser, interpreted
         and rendered into human readable or audible content on the screen.</p>
+    <ul>
+        <li>This</li>
+        <li>is</li>
+        <li>a</li>
+        <li>&lt;ul&gt;</li>
+        <li>list</li>
+    </ul>
+
+    <ol>
+        <li>This</li>
+        <li>is</li>
+        <li>a</li>
+        <li>&lt;ol&gt;</li>
+        <li>list</li>
+    </ol>
+
+
 </body>
 
 </html>
