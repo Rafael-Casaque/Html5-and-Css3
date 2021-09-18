@@ -1,0 +1,134 @@
+<!--ATENTION-->
+<!--this page is hosted at https://first-table-html.web.app-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>First Table</title>
+
+    <style>
+        body{
+            background-image: url(car.jpg);
+            background-size: cover;
+            background-repeat: no-repeat;
+            font-family: sans-serif;
+            font-size: 18px;
+        }
+        table{
+            color: white;
+            text-align: center;
+            margin: auto ;
+            margin-top: 16px;
+            text-shadow: 2px 2px 2px black;
+        }
+        table,td,th{
+            border: double 2px rgba(255, 255, 255, 0.425);
+        }
+    </style>
+</head>
+<body>
+    <table>
+        <caption>Fictitious car price found around</caption>    <!--Tag que define o conteúdo da tabela-->
+        <thead>                                                 <!--Tag semântica que define o conteúdo do cabeçalho-->
+            <tr>                                                <!--Tag que define uma linha, cada tr é uma linha-->
+                <th>Model</th>                                  <!--Taga que define uma coluna a ser inserida na linha-->
+                <th>Name</th>
+                <th>Year</th>
+                <th>Price</th>
+            </tr>
+        </thead>
+        <tbody>                                                 <!--Tag semântica que define o conteúdo da tabela-->
+            <tr>
+                <td rowspan="11">Chevrolet</td>                 <!--Rowspan define o tamanho de linhas que a coluna ocupará-->
+                <td rowspan="4">Opala</td>                      <!--Tag que define o conteúdo de uma célula-->
+                <td>1968-1971</td>
+                <td>R$ 1.756</td>
+            </tr>
+            <tr>
+                <td>1972-1980</td>
+                <td>R$ 2.345</td>
+            </tr>
+            <tr>
+                <td>1981-1989</td>
+                <td>R$ 1.756</td>
+            </tr>
+            <tr>
+                <td>1990-1992</td>
+                <td>R$ 1.756</td>
+            </tr>
+            <tr>                
+                <td rowspan="6">Camaro</td>
+                <td>1967-1969</td>
+                <td rowspan="3">R$ 666,666</td>
+            </tr>
+            <tr>                                
+                <td>1970-1981</td>                
+            </tr>
+            <tr>                                
+                <td>1982-1992</td>                
+            </tr>
+            <tr>                                
+                <td>1993-2002</td>                
+                <td>R$ 86.500</td>                
+            </tr>
+            <tr>                                
+                <td>2009-2015</td>                
+                <td>R$ 115.250</td>                
+            </tr>
+            <tr>                                
+                <td>2016-...</td>                
+                <td>R$ 225.750</td>                
+            </tr>
+            <tr>
+                <td>Corsa</td>                                                
+                <td>1994-2015</td>                
+                <td>R$ 12.235,66</td>                
+            </tr>
+            <tr>
+                <td rowspan="7">BMW</td>                                                                  
+                <td>E21</td>                                                
+                <td>1975-1983</td>                
+                <td>infinite</td>                
+            </tr>
+            <tr>                
+                <td>E30</td>                                                
+                <td>1982-1994</td>                
+                <td rowspan="2">R$ 7777.77</td>                 
+            </tr>
+            <tr>                
+                <td>E36</td>                                                
+                <td>1990-2000</td>                               
+            </tr>
+            <tr>            
+                <td>E46</td>                                                
+                <td>1998-2006</td>                
+                <td>R$ 36.600</td>                
+            </tr>
+            <tr>            
+                <td>E90</td>                                                
+                <td>2004-2014</td>                
+                <td>R$ 89.640</td>                
+            </tr>
+            <tr>            
+                <td>F30</td>                                                
+                <td>2012-2019</td>                
+                <td>R$ 135.664</td>                
+            </tr>
+            <tr>            
+                <td>G20</td>                                                
+                <td>2019-...</td>                
+                <td>R$ 275.000</td>                
+            </tr>
+        </tbody>
+        
+        <tfoot>                                                             <!--Tag semântica que define o conteúdo do rodapé-->
+            <tr>
+                <td colspan="4">Data obtained today</td>                    <!--colspan define a quantidade de colunas que a linha irá ocupar-->
+            </tr>
+        </tfoot>
+    </table>
+</body>
+</html>
