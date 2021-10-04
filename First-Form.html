@@ -1,0 +1,65 @@
+<!--ATENTION-->
+<!--this page is hosted at https://my-first-form-html.web.app-->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>First Form</title>
+    <style>
+    body{
+        margin: 0 30% 0 30%;        
+        background-image: url(background.jpg);
+        background-size: cover;
+        background-repeat: no-repeat;
+        color: white;
+        font-family: sans-serif;
+        font-size: 16px;
+    }
+    legend{
+        text-transform: uppercase;            
+    }
+    form{
+        margin: 7% 0 0 0 ;
+        background-color: rgba(0, 0, 0, 0.5);        
+    }
+    button{
+        padding: 0 21% 0 21%;
+        margin: 5px 2px 0px 2px;
+    }
+    button:hover{
+        background-color: gray;
+    }
+    </style>
+</head>
+
+<body>
+    <form action="https://tiagoifsp.ddns.net/inw/tutorialForm/index.php" method="POST" autocomplete="on">
+        <fieldset>
+            <legend>Profile Informations</legend>
+            <p><input id="name" type="text" name="nome" minlength="4" maxlength="10" placeholder="Insert your name"></p>
+            <p><input id="age" type="number" name="idade" min="18" max="60" placeholder="Age"></p>
+            <p><input type="time" name="hora" min="07:45" max="18:25"></p>
+            <label>Choose your gender</label>
+            <p><input type="radio" name="sexo" value="M">Male</p>
+            <p><input type="radio" name="sexo" value="F">Female</p>
+            <p><input type="radio" name="sexo" value="O">Others</p>
+        </fieldset>
+        <fieldset>
+            <legend>fruit preferences</legend>
+            <label>Choose the fruits you like</label>
+            <p><input type="checkbox" name="frutas[]" value="orange">Orange</p>
+            <p><input type="checkbox" name="frutas[]" value="grape">Grape</p>
+            <p><input type="checkbox" name="frutas[]" value="cherry">Cherry</p>
+            <p><input type="checkbox" name="frutas[]" value="banana">Banana</p>
+            <p><input type="checkbox" name="frutas[]" value="apple">Apple</p>
+        </fieldset>
+        <button type="submit">Send</button>
+        <button type="reset">Reset</button>
+    </form>
+</body>
+
+</html>
