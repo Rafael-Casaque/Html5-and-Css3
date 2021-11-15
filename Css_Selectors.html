@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Css Selectors</title>
+    <style>
+        p{
+            color:blue;
+        }
+        .p2{
+            color:green;
+        }
+        #p3{
+            color:red;
+        }
+        
+        /*combinadores*/
+
+        .p4, .p5{   /*Seleciona ambas as classes*/
+            color: black;
+        }
+        div p{      /*Seleciona os elementos p que são descendentes de div*/
+            color:gold;
+        }
+        div>p{      /*Seleciona os elementos p que são filhos direto de div*/
+            color: coral;
+        }
+        .p6+p{      /*Seleciona o elemento p que são irmãos imediatos de .p6*/
+            color: yellowgreen;
+        }
+        .p7~p{      /*Seleciona todos os elementos p que vem depois de .p7*/
+            color: violet;
+        }
+
+        /*Seletores por atributos (muito utilizado em forms)*/
+        
+        [atributo]{     /*Seleciona todos os elemtnos com "atributo" como atributo*/
+            color: cyan;
+        }
+        [atributo="verde azul vermelho"]{   /*Seleciona todos os elemtnos com que tem "verde azul vermelho" como atributo*/
+            color: rgb(136, 255, 0);
+        }
+        [atributo^="verde"]{    /*Seleciona todos os elemtnos que tem "verde" como começo do atributo*/
+            color: red;
+        }
+        [atributo~="verde"]{    /*Seleciona todos os elemtnos que tem a palavra "verde" como atributo*/
+            color: gray;
+        }
+        [atributo~="azul"]{     /*Seleciona todos os elemtnos que tem a palavra "azul" como atributo*/
+            color: red;
+        }
+        [atributo^="v"]{        /*Seleciona todos os elemtnos que tenham "v" no começo do atributo*/
+            color: rgb(0, 162, 255);
+        }
+        [atributo$="lho"]{      /*Seleciona todos os elemtnos que tenham "v" no término do atributo*/
+            color: red;
+        }
+        [atributo*="az"]{       /*Seleciona todos os elemtnos que tenham "az" presente no atributo*/
+            color: rgb(255, 0, 255);
+        }
+
+        /*Pseudo Seletores*/
+        /*Selecionam os elementos com base em seu estado*/
+
+        /*Por exemplo, o comando hover*/
+
+        p:hover{    /*Seleciona os elementos quando o mouse é passado em cima*/
+            color: black;
+        }        
+        p*{
+            color: aquamarine;
+        }
+
+    </style>
+
+</head>
+<body>
+    <p>One</p>
+    <p class="p2">Two</p>
+    <p id="p3">Three</p>
+    <p class="p4">Four</p>
+    <p class="p5">Five</p>
+    <div>
+        <section>
+            <p>Six</p>
+        </section>
+    </div>
+    <div>
+        <p>Seven</p>
+    </div>
+    <p class="p6">Eight</p>
+    <p class="p7">Nine</p>    
+    <p>Ten</p>
+    <h4 atributo="verde azul vermelho">Eleven</h4>
+    <h4 atributo="verde azul vermelho">Twelve</h4>
+    <h4 atributo="verde azul vermelho">Thriteen</h4>
+    <h4 atributo="verde azul vermelho">Fourteen</h4>
+    <h4 atributo="verde azul vermelho">Fifteen</h4>
+</body>
+</html>
