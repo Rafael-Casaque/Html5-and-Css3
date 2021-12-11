@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Css - Grid Layout</title>
+
+    <style>
+
+        /*https://css-tricks.com/snippets/css/complete-guide-grid/*/
+
+        body{
+            display: grid;
+            grid-template-rows: auto;   /*linhas do template são automáticas*/
+            /*formas de se dividir as colunas*/
+            grid-template-columns: 20% 60% 20%;
+            grid-template-columns: 500px 300px 400px;
+            grid-template-columns: 3fr 5fr 4fr; /*divisão fracionária (o padrão é sempre 12 no denominador*/
+            grid-template-columns: 33.3% 33.3% 33.3%;            
+            grid-template-areas: "sessão1 sessão1 sessão1" "esq centro dir" "rodapé rodapé rodapé"; /*define o nome das linhas*/            
+            row-gap: 20px;  /*Coloca espaçamento entre as linhas*/
+            column-gap: 20px;   /*Coloca espaçamento entre as colunas*/
+            
+
+        }
+        body>footer{
+            grid-area: sessão1;
+
+            /*Forma alternativa de posicionamento
+
+            grid-row: 1;
+            grid-column:2;
+            grid-column:2 / span 3; ocupa da coluna 2 até a 3
+            */
+        }
+    </style>
+</head>
+<body>    
+        <section>
+            <h1>Primeira Sessão</h1>
+            <hr>
+            <h3>Essa é a primeira sessão da página</h3>
+        </section>
+        <section>
+            <h1>Segunda Sessão</h1>
+            <hr>
+            <h3>Essa é a segunda sessão da página</h3>
+        </section>
+        <section>
+            <h1>Terceira Sessão</h1>
+            <hr>
+            <h3>Essa é a Terceira sessão da página</h3>
+        </section>   
+        <footer>
+            <h1>Esse é o rodapé</h1>
+        </footer> 
+</body>
+</html>
